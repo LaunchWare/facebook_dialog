@@ -25,6 +25,7 @@ module FacebookDialog
     #ref	
     def initialize(options = {})
       @options = options
+      @options[:app_id] = FacebookDialog.api_key
     end
 
     def url

@@ -8,6 +8,8 @@ A utility that makes it easy to integrate progressively enhanced facebook dialog
   #in a Rails View
   <%= link_to "Share on Facebook" FacebookDialog::Feed.new({
       redirect_uri: "http://www.example.com",
+      link: "http://www.example.com",
+      name: "Want to know?",
       caption: "Something pretty awesome",
       description: "Zomg! You won't believe what I found on the web."
     }), 

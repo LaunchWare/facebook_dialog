@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe FacebookDialog::Feed do
   let(:redirect_uri) { "http://www.example.com" }
-  let(:title) { "Title! With. Special Characters" }
+  let(:name) { "Title! With. Special Characters" }
   let(:caption) { "A Caption" }
   let(:description) { "A description" }
   let(:api_key) { "An Api Key" }
@@ -14,7 +14,8 @@ describe FacebookDialog::Feed do
   subject do 
     FacebookDialog::Feed.new({
       redirect_uri: redirect_uri, 
-      title: title, 
+      name: name, 
+      link: redirect_uri,
       caption: caption, 
       description: description
     })
