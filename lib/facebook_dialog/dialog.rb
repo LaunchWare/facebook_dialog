@@ -35,7 +35,14 @@ module FacebookDialog
 
     HTML_ONLY_KEYS = [:redirect_uri, :display]
     def to_h
-      @options.reject{|key, value| HTML_ONLY_KEYS.include?(key) }
+      validate_options!
+      options = @options.merge(self.class.defaults)
+      options.reject{|key, value| HTML_ONLY_KEYS.include?(key) }
+    end
+
+    protected
+    def validate_options!
+      FacebookDialog::Validators::Display.new(@options).validate
     end
   end
 end

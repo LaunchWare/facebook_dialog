@@ -22,7 +22,7 @@ describe FacebookDialog::Feed do
   end
 
   its(:url) { should include(Rack::Utils.escape(redirect_uri)) }
-  its(:url) { should include(Rack::Utils.escape(title)) }
+  its(:url) { should include(Rack::Utils.escape(name)) }
   its(:url) { should include(Rack::Utils.escape(description)) }
   its(:url) { should include(Rack::Utils.escape(caption)) }
 

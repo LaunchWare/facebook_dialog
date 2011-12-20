@@ -8,4 +8,11 @@ describe FacebookDialog::Dialog do
       FacebookDialog::ResourceNameNotDefined
     )
   end
+
+  it "validates the display" do
+    mock_validator = mock(:validate => nil)
+    FacebookDialog::Validators::Display.expects(:new).returns(mock_validator)
+
+    DummyDialog.new.to_h
+  end
 end
