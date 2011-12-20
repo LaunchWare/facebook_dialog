@@ -2,6 +2,10 @@
 
 A utility that makes it easy to integrate progressively enhanced facebook dialogs
 
+[![Build Status](https://secure.travis-ci.org/enlightsolutions/facebook_dialog.png)](http://travis-ci.org/enlightsolutions/facebook_dialog)
+
+This is available for Rails >= 3.0 and Ruby >= 1.9.2
+
 ```ruby
   FacebookDialog.api_key = "<your app_id/api key>"
   
