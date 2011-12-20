@@ -5,7 +5,7 @@ A utility that makes it easy to integrate progressively enhanced facebook dialog
 ```ruby
   FacebookDialog.api_key = "<your app_id/api key>"
   
-  <%- #in a Rails View -%>
+  #in a Rails View
 
   <%- facebook_dialog = FacebookDialog::Feed.new({
       redirect_uri: "http://www.example.com",
@@ -17,7 +17,7 @@ A utility that makes it easy to integrate progressively enhanced facebook dialog
 
   <%= link_to "Share on Facebook", facebook_dialog.url, id: "share_on_facebook" %>
 
-  <%- #at the bottom of your page -%>
+  #at the bottom of your page
 
   <%= facebook_js %>
   <%= javascript_tag do %>
