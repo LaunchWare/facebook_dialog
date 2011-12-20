@@ -1,8 +1,12 @@
 require "rack/utils"
 require "active_model"
+require "active_support/core_ext/class"
 require "configatron"
 
 require "facebook_dialog/version"
+require "facebook_dialog/dialog"
+
+require "facebook_dialog/oauth"
 require "facebook_dialog/feed"
 
 module FacebookDialog
