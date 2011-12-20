@@ -37,12 +37,17 @@ module FacebookDialog
     def to_h
       validate_options!
       options = @options.merge(self.class.defaults)
-      options.reject{|key, value| HTML_ONLY_KEYS.include?(key) }
+      options = options.reject{|key, value| HTML_ONLY_KEYS.include?(key) }
+      serialize_options(options)
     end
 
     protected
     def validate_options!
       FacebookDialog::Validators::Display.new(@options).validate
+    end
+
+    def serialize_options(options)
+      FacebookDialog::OptionSerialization.new(options).serialized_hash
     end
   end
 end

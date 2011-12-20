@@ -6,6 +6,7 @@ require "configatron"
 require "facebook_dialog/version"
 require "facebook_dialog/dialog"
 require "facebook_dialog/validators"
+require "facebook_dialog/option_serialization"
 
 require "facebook_dialog/oauth"
 require "facebook_dialog/feed"
