@@ -32,10 +32,15 @@ module FacebookDialog
     ]
   end 
 
+  def self.omniauth_enabled?
+    defined?(::OmniAuth) && defined?(::OmniAuth::Strategies::Facebook)
+  end
+
 
   class ResourceNameNotDefined < Exception; end;
   class InvalidDisplay < Exception; end;
 end
 
+require "facebook_dialog/omni_auth" if FacebookDialog.omniauth_enabled?
 require "facebook_dialog/railtie" if defined?(Rails)
 

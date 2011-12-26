@@ -1,4 +1,5 @@
 require 'rspec'
+require 'omniauth-facebook'
 require 'facebook_dialog'
 require 'mocha'
 

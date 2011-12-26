@@ -6,6 +6,10 @@ module FacebookDialog
       super
       @options[:client_id] = @options.delete(:app_id)
     end   
+
+    def scope
+      @options[:scope]
+    end
   end
 end
 
