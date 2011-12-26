@@ -52,6 +52,7 @@ In an initializer like config/initializers/omniauth.rb:
 ```
 
 Alternatively, we provide you 
+
 ```ruby
     <%= link_to "Sign In With Facebook", FacebookDialog::OmniAuth.dialog({
       display: "popup",
