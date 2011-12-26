@@ -23,7 +23,7 @@ This is available for Rails >= 3.0 and Ruby >= 1.9.2
 
   #at the bottom of your page
 
-  <%= facebook_js %>
+  <%= fb_js %>
   <%= javascript_tag do %>
     <%= fb_init_js %>
     $("#share_on_facebook").click(function(e){
