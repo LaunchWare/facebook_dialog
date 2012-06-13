@@ -2,7 +2,7 @@ module FacebookDialog
   module ScriptHelper
     def fb_js
       content_tag(:div, "", id: "fb-root") +
-      javascript_include_tag('http://connect.facebook.net/en_US/all.js')
+      javascript_include_tag('//connect.facebook.net/en_US/all.js')
     end
 
     def fb_init_js(options = {})
