@@ -4,8 +4,8 @@ module FacebookDialog
 
     def initialize(options= {})
       super
-      @options[:client_id] = @options.delete(:app_id)
-    end   
+      @options[:client_id] ||= @options.delete(:app_id)
+    end
 
     def scope
       @options[:scope]
