@@ -1,10 +1,10 @@
 module FacebookDialog
   module OmniAuth
     def self.dialog(additional_options = {})
-      options = authorize_params.merge(additional_options) 
+      options = authorize_params.merge(additional_options)
       options[:redirect_uri] ||= hacked_app.callback_url
-      FacebookDialog::Oauth.new(options.merge(authorize_params))
-    end 
+      FacebookDialog::Oauth.new(authorize_params.merge(options))
+    end
 
     protected
     def self.authorize_params
